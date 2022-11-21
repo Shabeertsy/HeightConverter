@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-image: linear-gradient(to left, rgb(124, 34, 34), black);
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .box {
+            margin-top: 20px;
+            width: 400px;
+            height: 600px;
+            border: 1px solid;
+            border-radius: 13px;
+            border-color: aliceblue;
+
+        }
+
+        h2 {
+            color: white;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .inch,
+        .feet {
+            height: 40px;
+            width: 350px;
+            border-radius: 8px;
+            border: none;
+            margin-top: 10px;
+            margin-left: 20px;
+
+
+        }
+
+        .feet {
+            margin-top: 200px;
+        }
+
+        button {
+            width: 200px;
+            height: 40px;
+            margin-top: 30px;
+            margin-left: 90px;
+            border-radius: 8px;
+            border: 1px solid;
+            border-color: black;
+            color: white;
+            background-color: green;
+        }
+
+        button:hover {
+            background-color: white;
+            color: green;
+            border: 1px solid;
+            border-color: green;
+
+        }
+
+        .result {
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <h2>Height Converter</h2>
+            <div class="box">
+
+                <input id="fe" class="feet" type="text" placeholder="    Enter the height in feet"><br>
+                <input id="inc" class="inch" type="text" placeholder="Inches">
+                <button onclick="inchConvertor()">Convert to Inches</button>
+
+                <h3 class="result" id="display"></h3>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+
+
+        function inchConvertor() {
+            feet = document.getElementById('fe').value;
+            let inches = 12 * feet;
+            document.getElementById('inc').value = inches;
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
